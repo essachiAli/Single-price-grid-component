@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: hsl(218, 71%, 90%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-family: "Karla", sans-serif;
+}
+.container {
+  width: 85%;
+  display: grid;
+
+  box-shadow: 0px 0px 20px hsl(218, 22%, 67%);
+  border-radius: 10px;
+  margin-top: 20%;
+}
+.container > * {
+  padding: 0px 30px;
+}
+.container div > * {
+  margin: 10px 0px;
+}
+p {
+  font-size: 0.8rem;
+  color: hsl(204, 43%, 93%);
+}
+.container div h3 {
+  margin-top: 30px;
+}
+
+.join {
+  background-color: hsl(195, 67%, 99%);
+  border-radius: 10px 10px 0px 0px;
+  color: hsl(179, 62%, 43%);
+}
+.join p {
+  color: hsl(218, 22%, 67%);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+.join h4 {
+  color: hsl(71, 73%, 54%);
+  margin: 20px 0px;
+}
+.price {
+  background-color: hsl(179, 62%, 43%);
+  color: hsl(195, 67%, 99%);
+}
+.price button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: inherit;
+  background-color: hsl(71, 73%, 54%);
+  font-weight: 700;
+  margin-bottom: 20px;
+  box-shadow: 0px 10px 10px hsl(179, 54%, 37%);
+  /* cursor: pointer; */ /* There is no point in activating cursor scene the project is only for educational purposes*/
+  transition: 0.2s;
+}
+#pr1 span {
+  font-size: 14px;
+  font-weight: 400;
+  color: hsl(180, 44%, 79%);
+  margin-left: 10px;
+}
+
+#pr1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.why {
+  background-color: hsl(179, 58%, 51%);
+  border-radius: 0px 0px 10px 10px;
+  line-height: 1.5;
+  color: hsl(195, 67%, 99%);
+}
+.why p {
+  margin-bottom: 30px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: hsl(218, 17%, 38%);
+  margin-bottom: 30px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 500px) {
+  .container {
+    width: 500px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    margin-top: unset;
+  }
+  .join {
+    grid-column: 1 / span 2;
+  }
+  .price {
+    grid-column: 1/ 2;
+    grid-row: 2 / 2;
+    border-radius: 0px 0px 0px 10px;
+  }
+  .why {
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+    border-radius: 0px 0px 10px 0px;
+  }
+}
